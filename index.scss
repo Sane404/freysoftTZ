@@ -1,0 +1,552 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    
+    overflow-x: hidden;
+}
+header{
+    background: #020213;
+    padding: 10px 0;
+    position: sticky;
+    top:0;
+    z-index: 100;
+}
+.header-wrap{
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    &__logo{
+        img{
+            height: 100%;
+display: block;
+        }
+    }
+    &__contact_icon{
+        margin-left: auto;
+        cursor: pointer;
+    }
+    &__burger_icon{
+        margin-left: 25px;
+        cursor: pointer;
+    }
+    
+}
+.header-info{
+    color:white;
+    padding: 0 20px;
+    background: #020213;
+    padding-top: 50px;
+    &__title__text{
+        font-family: Helvetica Now Display;
+        font-size: 40px;
+        font-weight: 900;
+        letter-spacing: -1px;
+        text-align: left;
+        margin-bottom: 16px;
+        &-teal{
+            color:#18E8A4;
+        }
+    }
+    &__about
+        {
+        font-family: Helvetica Now Display;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0px;
+        text-align: left;
+
+    }
+
+}
+.header_links{
+    color:white;
+    display: flex;
+    flex-direction: column;
+    font-family: Helvetica Now Display;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+    font-size: 16px;
+    list-style-type: none;
+    position: fixed;
+    right: 0;
+    top:59px;
+    z-index: 100;
+    transform: translateX(100%);
+    transition: transform 1s;
+    width: 100%;
+    text-align: center;
+    background:#020213;
+    &-item{
+        padding: 5px;
+        cursor: pointer;
+    }
+    &-item:nth-child(4){
+        color: #18E8A4;
+        font-weight: 900;
+
+    }
+    &.visible{
+        transform: translateX(0);
+    }
+
+}
+.images-banner__row-desktop{
+    display: none;
+}
+.images-banner{
+    background: #020213;
+    padding-top: 42px;
+    &__row{
+        z-index: 40;
+        display: flex;
+        margin-bottom: 6.3px;
+        &:nth-child(odd){
+            transform: translateX(-40px);
+        }
+        &:nth-child(even){
+            transform: translateX(5px);
+        }
+        &-image{
+            height: 66.79882049560547px;
+            width: 119.10355377197266px !important;
+            border-radius: 10px;
+            margin-right: 6.3px;
+            flex-shrink: 0;
+        }
+    }
+    &__button{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 42px;
+        padding-bottom: 63px;
+        button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            width: 172px;
+            border: none;
+            border-radius: 10px;
+            padding: 16px;
+            background: #18E8A4;
+            font-family: Helvetica Now Display;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 0px;
+        }
+    }
+}
+.about-company{
+    background: #fff;
+    padding: 48px 20px;
+    &__title{
+        margin-bottom: 31px;
+        &-text{
+            font-family: Helvetica Now Display;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 900;
+            letter-spacing: -1px;
+            text-align: left;
+            line-height: 28.8px;
+
+        }
+    }
+    &__description{
+        
+        &-text{
+            &:not(:last-child){
+            margin-bottom: 31px;
+        }
+           font-family: Helvetica Now Display;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            text-align: left;
+        }
+    }
+}
+.recruitment{
+    background: #D5D4D9;
+    &__about{
+        padding: 48px 20px;
+        &__title{
+            margin-bottom: 31px;
+            &-text{
+                font-family: Helvetica Now Display;
+                font-style: normal;
+                font-weight: 900;
+                line-height: 35px;
+                letter-spacing: -1px;
+                text-align: left;
+                font-size: 32px;
+            }
+        }
+        &__description{
+            &-text{
+                 &:not(:last-child){
+            margin-bottom: 31px;
+        }
+                font-family: Helvetica Now Display;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 29px;
+                letter-spacing: 0px;
+                text-align: left;
+                font-size: 16px;
+
+            }
+        }
+    }
+}
+.recruitment__stages{
+    padding: 0 20px;
+    width: 300%;
+    display: flex;
+    transition: transform 1s;
+    &__card{
+        width: 100%;
+        &:not(:last-child){
+            margin-right:20px;
+        }
+        height: 514px;
+        position: relative;
+        background: #fff;
+        border-radius: 16px;
+        padding: 32px 24px 0 24px;
+        font-family: Helvetica Now Display;
+        &-stage-number{
+            font-weight: 700;
+            line-height: 15px;
+            letter-spacing: 0px;
+            text-align: left;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+        &-stage-title{
+            margin-bottom: 24px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 35px;
+            letter-spacing: -1px;
+            text-align: left;
+            font-size: 32px;
+
+        }
+        &-stage-description{
+            font-style: normal;
+            font-weight: 400;
+            line-height: 25px;
+            letter-spacing: 0px;
+            text-align: left;
+            font-size: 16px;
+        }
+        &-stage-bg{
+            position: absolute;
+            font-size: 140px;
+            font-weight: 900;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color:rgba(128, 0, 128, 0.3)
+        }
+    }
+}
+.recruitment__stages__card:nth-child(2){
+        display: none;
+    }
+.recruitment__navigation{
+    transform: translateY(-80px);
+    
+    &-svg{
+        background-image: url('./assets/arrows.svg');
+        background-repeat: repeat-x;
+        // height: 155px;
+    }
+    &-paginator{
+    display: flex;
+    justify-content: center;
+    }
+}
+
+.candidate_wrap{
+    background: #AEA9A8;
+    font-family: Helvetica Now Display;
+    padding: 0 20px;
+    .candidate-perks{
+        &__title{
+        padding-top: 80px;
+        color:white;
+        font-size: 32px;
+        font-weight: 900;
+        line-height: 35px;
+        letter-spacing: -1px;
+        text-align: left;
+        font-style: normal;
+        margin-bottom: 55px;
+    }
+    }
+    
+}
+.candidate-perks__wrap{
+    display: flex;
+    width: 200%;
+    transition: transform 1s;
+}
+.candidate-perks__card{
+    background: #fff;
+    border-radius: 16px;
+    padding: 0 20px;
+    width: 100%;
+    height: 551px;
+    &:not(:last-child){
+        margin-right: 20px;
+
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    &-logo{
+        display: flex;
+        justify-content: center;
+    }
+    &-title{
+font-family: Helvetica Now Display;
+font-size: 32px;
+font-style: normal;
+font-weight: 800;
+line-height: 35px;
+letter-spacing: -1px;
+text-align: center;
+
+    }
+}
+.candidate-perks__card__list{
+    list-style-type: none;
+    &-item{
+font-family: Helvetica Now Display;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 25px;
+letter-spacing: 0px;
+text-align: left;
+margin-top: 30px;
+    }
+
+}
+.candidate__navigation-paginator{
+    display: flex;
+    justify-content: center;
+}
+.images-banner__button{
+    button{
+        cursor: pointer;
+
+    }
+}
+.paginator_recruitment,.paginator_candidate{
+    cursor: pointer;
+}
+//media
+@media (min-width: 530px) {
+  .images-banner{
+      &__row{
+          &-image{
+              width: 188.6827392578125px !important;
+              height: 105.82206726074219px;
+          }
+      }
+  }
+}
+@media (min-width: 768px) {
+  .about-company__description,.recruitment__about__description{
+      display: flex;
+      gap:32px;
+      line-height: 28,8px;
+  }
+  .paginator_recruitment-to-hide{
+      display: none;
+  }
+  .recruitment__stages{
+      width: 150%;
+      &__card{
+          width: 50%;
+      }
+  }
+  .candidate-perks__title{
+      max-width: 477px;
+  }
+  .candidate__navigation-paginator{
+      display: none;
+  }
+  .candidate-perks__wrap{
+      width: 100%;
+      &__card{
+          width: 50%;
+      }
+  }
+  .candidate-perks__card__list-item{
+       padding: 5px 5px 5px 44px;
+        background: url('./assets/list-get.svg') no-repeat left top;
+  }
+  .candidate-perks__card:last-child{
+      ul{
+        li{
+            background: url('./assets/list-wont-get.svg') no-repeat left top;
+        }
+        }
+    }
+}
+@media (min-width: 902px) {
+  .images-banner{
+      &__row{
+          &-image{
+              width: 378px !important;
+              height: 212px;
+          }
+      }
+  }
+  .desktop_hidden{
+      display: none;
+  }
+  .images-banner__row-desktop{
+      background-image: url('./assets/images/asset7.png');
+        background-size: cover;
+        height: 212px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        border-radius: 10px;
+        margin-right: 6.3px;
+        width: 378px !important;
+        background-color: #33d49f;
+        background-blend-mode: screen;
+        cursor: pointer;
+        font-size: 28px;
+        font-weight: 800;
+        line-height: 34px;
+        letter-spacing: 0px;
+        font-family: Helvetica Now Display;
+
+  }
+  .images-banner__button{
+      display: none;
+  }
+  .images-banner__row:nth-child(3){
+      padding-bottom: 194px;
+  }
+}
+@media (min-width:1440px){
+    .about-company{
+        max-width: 1270px;
+        margin: 0 auto;
+        display: flex;
+        padding-right: 0;
+        padding-left: 0;
+        &__title{
+            margin-right: 100px;
+            // width:  320px;
+            flex-shrink: 0;
+            font-size: 62px;
+        }
+    }
+    .recruitment__about{
+        max-width: 1270px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 0;
+        padding-left: 0;
+        &__title{
+            width: 363px;
+            flex-shrink: 0;
+        }
+        &__description{
+            flex-direction: column;
+            width: 613px;
+        }
+    }
+    .recruitment__stages__card-stage-description-special{
+        display: flex;
+        gap:24px;
+        p{
+            flex:1;
+        }
+    }
+    .recruitment__stages{
+        max-width: 1270px;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .recruitment__stages__card:nth-child(2){
+        display: block;
+    }
+    .recruitment__stages__card:nth-child(3),.recruitment__stages__card:nth-child(4),.recruitment__navigation-paginator{
+        display: none;
+    }
+    .candidate-perks{
+       max-width: 1270px;
+        margin: 0 auto; 
+    }
+    .candidate-perks__card__list{
+        padding-left: 134px;
+        padding-right: 129px;
+    }
+    .header-info-wrap{
+        
+        background: #020213;
+        .header-info{
+            display: flex;
+            max-width: 1270px;
+            margin: 0 auto;
+            padding-left: 0;
+            padding-right: 0;
+            &__title{
+                max-width: 430px;
+            }
+            &__about{
+                font-size: 24px;
+                max-width: 576px;
+            }
+        }
+    }
+    .header-wrap{
+        max-width: 1270px;
+            margin: 0 auto;
+            padding: 0;
+    }
+    .header-wrap{
+        display: flex;
+        &__contact_icon,&__burger_icon{
+            display: none;
+        }
+    }
+    .header_links{
+        position: static;
+        flex-direction: row;
+        align-items: center;
+        transform: translateX(0);
+        &-item:not(:last-of-type){
+            margin-right: 32px;
+        }
+        &-item:nth-child(1){
+            margin-left: auto;
+        }
+        &-item:nth-child(5){
+            padding: 10px 15px;
+            border: 3px solid #18E8A4;
+            border-radius: 30px;
+            margin-left: auto;
+        }
+    }
+}
